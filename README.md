@@ -7,7 +7,9 @@ This project aims to assist visually impaired individuals by providing an on-dev
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Model Training and Conversion](#model-training-and-conversion)
-
+  - [Training YOLOv8 Model](#training-yolov8-model)
+  - [Converting to TensorFlow Lite](#converting-to-tensorflow-lite)
+  - [Colab Notebook Workflow](#colab-notebook-workflow)
 
 ## Introduction
 Visually impaired individuals often face challenges in identifying objects in their environment. This project leverages advanced object detection technology to create a user-friendly Android application that assists in object identification through audio feedback.
@@ -26,6 +28,7 @@ Visually impaired individuals often face challenges in identifying objects in th
 - **Android Text-to-Speech API:** Provides speech output capabilities for the app.
 
 ## Model Training and Conversion
+
 ### Training YOLOv8 Model:
 - The YOLOv8 model is trained using the PASCAL VOC dataset, which contains a diverse set of object categories.
 - Ensure the model achieves high accuracy and efficiency suitable for real-time detection on mobile devices.
@@ -33,5 +36,11 @@ Visually impaired individuals often face challenges in identifying objects in th
 ### Converting to TensorFlow Lite:
 - The trained YOLOv8 model is converted into TensorFlow Lite format for on-device inference.
 - Use TensorFlow Lite Converter and optimize the model for better performance on mobile devices.
+- If needed, the TensorFlow Lite model can be replaced with an updated YOLOv8n model or any other compatible variant for improved detection performance.
 
-
+### Colab Notebook Workflow:
+- A Google Colab notebook has been developed to streamline the model training and conversion process:
+  1. **Dataset Download:** The notebook downloads the PASCAL VOC dataset and stores it in your Google Drive for easy access.
+  2. **Model Fine-Tuning:** The YOLOv8 model is fine-tuned using the PASCAL VOC dataset, ensuring the model is adapted for specific detection requirements.
+  3. **Conversion to TensorFlow Lite:** Once trained, the YOLOv8 model is converted into TensorFlow Lite format directly within the notebook. The conversion includes optimization steps for efficient on-device inference.
+- The generated TensorFlow Lite model can then be downloaded and seamlessly integrated into the Android application.
